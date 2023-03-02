@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* a{
+    text-decoration: none;
+}
+
+* li {
+    list-style: none;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg);
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(45%); 
+}
+
+.menu {
+    position: relative
+    height: 15vh;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo a{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li {
+    padding: 0 17px;
+}
+
+.menu ul li a{
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* CONTENT */
+.content {
+    width: 85%;
+    margin: 0 auto;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.content .header,.grid-card {
+    width: 50%;
+    position: relative;
+}
+
+.content .header {
+    color: #fff;
+}
+
+.content .header h3{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+}
+
+.content .header h3 i{
+    color: burlywood;
+}
+
+.content .header h1{
+    font-size: 4.5 rem;
+}
+
+.content .header p{
+    opacity: .6;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px;
+}
+
+.grid-card .box {
+    width: 100%;
+    height: 230px;
+    /* background: red; */
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    transition: .4s;
+    position: relative;
+}
+
+
+
+.bg1{
+    background-image: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg');
+
+}
+
+.bg2{
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/08/05/40/actor-1807557__340.jpg');
+}
+
+.bg3{
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/22/18/52/beach-1761410__340.jpg');
+}
+
+.bg4{
+    background-image: url('https://media.istockphoto.com/id/1156355300/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%96%E0%B8%B2%E0%B8%94%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%E0%B8%AB%E0%B8%A3%E0%B8%B9-%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%9C%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%A1%E0%B8%AA.jpg?s=612x612&w=0&k=20&c=8uHgo1Y_DmjoGAvzQo8lOqxAA_8WPXa2kC__Kn-3z00=');
+}
+
+.content .box h2{
+    position: absolute;
+    bottom: 7px;
+    left: 15px;
+    /* color: #fff; */
+}
+
+.content .box:hover{
+    transform: translateY(-15px);
+}
+
+.header button{
+    border: solid 1px #fff;
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 15px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+.header button:hover{
+    background: #fff;
+    color: #000;
+}
