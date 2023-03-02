@@ -21,6 +21,7 @@ body {
     padding-bottom: 15px;
     transition: .4s ease-in-out;
     /* 2 คำสั่งข้างล่างมีไว้เพราะว่าปกติแล้วภาพจะไม่เท่ากันแล้วกล่องข้างล่างจะโดนกินพื้นที่ทำให้โผล่มาข้างบน */
+    /* จริงๆแล้ว display ก็พอแล้วแต่มันสามารถสั่งเพิ่มได้อีก */
     display: inline-block;
     -webkit-column-break-inside: avoid;
 }
