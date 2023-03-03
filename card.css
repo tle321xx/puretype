@@ -11,16 +11,37 @@
     height: 560px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+    /* overflow: hidden; หลังจากใส่ background: brown; จะเห็นได้ว่าขอบมันเหลี่ยมสามารถใช้คำสั่งนี้เพื่อซ่อนให้มันแสดง border-radius*/
+    overflow: hidden;
 }
 
 
+.img {
+    height: 250px;
+    background: brown;
+}
 
+.content {
+    text-align: center;
+    border-bottom: 2px solid white;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* background: red; */
+    align-items: center;
+    height: 60px;
+}
 
-
-
-
-
+.ft-l {
+    display: flex;
+}
 
 
 
