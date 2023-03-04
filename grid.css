@@ -212,13 +212,32 @@
 }
 
 
+.grid-container-align-more {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(2, 40px);
+    background: darkcyan;
+    padding: 1em;
+    height: 500px;
+    width:  100%;
+    justify-content: center;
 
+}
+/* justify-self จัดตำแหน่งใหม่ภายในตัวกล่องมันเอง */
+.align-more1 {
+    /* justify-self: start; */
+    /* align-self: center; */
+}
 
+.align-more2 {
+    /* justify-self: center; */
+    
+}
 
-
-
-
-
+.align-more3 {
+    /* justify-self: start; */
+    
+}
 
 
 
