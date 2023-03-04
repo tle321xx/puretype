@@ -64,23 +64,72 @@
 }
 
 .grid1 {
+    
     grid-column-start: 2;
     grid-column-end: 3;
+    /* Shorthand grid-column: 2 / 3; */
+    /* เริ่มคอลัมน์ที่2 จบคอลัมน์ที่3 */
     grid-row-start: 2;
     grid-row-end: 3;
+    /* Shorthand grid-row: 2 / 3; */
+
+    /* shorthand all-- grid-area: row-start, col-start, row-end, col-end */
+
+
+    /* เริ่มโรวที่2 จบโรวที่3 */
     /* ตัวเลขให้คำสั่งนี้คือตัวเลขที่นับตามเส้น col, row */
+    /* grid-column-start: 2;  อ่านว่า เริ่มgrid-col lineที่2*/
     /* เหมือนเป็นการกำหนดพิกัด */
 }
 
+.grid-container-shorthand {
+    background: greenyellow;
+    display: grid;
+
+    grid-template-columns:repeat(3, 1fr);
+    /*repeat 3 col 1fr เพิ่ม50px มาด้วยหมายความว่าทำซ้ำสามอันตรงกลาง*/
+    grid-template-rows:repeat(5, 100px);
+}
+
+.grid12 {
+    grid-column-start: 1;
+    grid-column-end: 4;  
+}
+
+.grid11 {
+    grid-row-start: 1;
+    grid-row-end: 3;  
+
+}
+
+.grid10 {
+    grid-row: 2 /span 3;
+    grid-column: span 2;
+}
 
 
+.grid-container-name {
+    background: fuchsia;
+    display: grid;
+    /* กำหนดคำสั่งชื่อ */
+    grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-3-start] 1fr [col-3-end];
+    grid-template-rows: [row-start row-1-start] 100px [row-1-end row-2-start] 100px [row-2-end];
+    /* ถ้าใช้คำสั่ง repeat EX. grid-template-rows: repeat(4, [row-start] 100px [row-end])*/
+    /* ถ้าใช้คำสั่ง repeat EX. grid-template-columns: repeat(3, [col-start] 1fr [col-end])*/
+    /* เป็นการตั้งชื่อตามเส้น col */
+}
 
-
-
-
-
-
-
+.grid-1 {
+    /* Ex-repeat name จากExด้านบน 
+        grid-column: col-start / col-start 3; */
+    /*  grid-row: row-start 2 / row-start 4 */
+    /* ทำช่อง1ให้มาอยู่แทนที่ช่อง5 โดยใช้คำสั่งชื่อ */
+    grid-column-start: col-2-start;
+    grid-column-end: col-3-start;
+    grid-row-start: row-2-start;
+    grid-row-end: row-2-end;
+    /* shorthand ได้เหมือนกัน */
+}
 
 
 
