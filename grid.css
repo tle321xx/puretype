@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.grid-container-gold {
+    display: grid;
+    /* width: 500px; */
+    grid-template-columns: 100px 50px 150px 25%;
+    /* คอลัมแรก 100px  คอลัมสอง 50px  คอลัมสาม 150px อันนี้เรากำหนดแค่4คอลัมน์สามารถกำหนดเพิ่มได้*/
+    grid-template-rows: 50px 100px;
+    /* เหมือนกับด้านบนเลย */
+    
+    background: gold;
+    padding: 1em;
+}
+
+.grid-items {
+    border: 1px solid red;
+}
+
+
+.grid-container-sky {
+    display: grid;
+    
+    grid-template-columns: minmax(auto, 50%) 1fr 2fr;
+    /* คอลัมแรก กล้างสุด50% คอลัมสอง 1ส่วน คอลัมสาม 2ส่วน */
+    grid-template-rows: minmax(100px, auto) 50px;
+    /* เหมือนกับด้านบนเลย */
+    
+    background: skyblue;
+    padding: 1em;
+}
+
+
+.grid-container-repeat {
+    display: grid;
+    
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
+    /*repeat 3 col 1fr เพิ่ม50px มาด้วยหมายความว่าทำซ้ำสามอันตรงกลาง*/
+    grid-template-rows: repeat(6, 1fr);
+    /* เหมือนกับด้านบนเลย  ใช้repeatแสดงเกินกว่าที่มีอยู่ได้แต่ไม่แสดงผลเพราะeleไม่พอ*/
+    /* คำสั่ง repeat col, row ควรที่จะสัมพันธ์กัน */
+    grid-gap: 10px 2em;
+    /* gap-col 10px, gap-row 2em */
+    background: forestgreen;
+    padding: 1em;
+}
+
+.grid-container-start {
+    display: grid;
+    
+    grid-template-columns:repeat(3, 1fr);
+    /*repeat 3 col 1fr เพิ่ม50px มาด้วยหมายความว่าทำซ้ำสามอันตรงกลาง*/
+    grid-template-rows:repeat(4, 100px);
+    /* เหมือนกับด้านบนเลย  ใช้repeatแสดงเกินกว่าที่มีอยู่ได้แต่ไม่แสดงผลเพราะeleไม่พอ*/
+    /* คำสั่ง repeat col, row ควรที่จะสัมพันธ์กัน */
+    
+    /* gap-col 10px, gap-row 2em */
+    background: thistle;
+    padding: 1em;
+}
+
+.grid1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* ตัวเลขให้คำสั่งนี้คือตัวเลขที่นับตามเส้น col, row */
+    /* เหมือนเป็นการกำหนดพิกัด */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
