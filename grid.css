@@ -131,6 +131,105 @@
     /* shorthand ได้เหมือนกัน */
 }
 
+.grid-container-area {
+    display: grid;
+    /* เราสามารถกำหนดตำแหน่งแบบนี้ได้ */
+    grid-template-areas: "header header"
+                        " content sidebar"
+                        " footer footer";
+    grid-template-columns: 1fr 200px;
+    /* header 150px     content sidebar  200px     footer footer  60px */
+    grid-template-rows: 150px 200px 60px; 
+    background: green;
+    padding: 1em;
+}
+/* สามารถจัด layout แบบนี้ได้ */
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-area {
+    border: 1px solid #ccc;
+}
+
+
+.grid-container-zindex {
+    background: powderblue;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(2, 100px);
+    padding: 1em;
+}
+
+.z1,
+.z2 {
+    grid-column-end: span 2;
+    grid-row-start: 1;
+}
+
+.z1 {
+    grid-column-start: 1;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.z2 {
+    grid-column-start: 2;
+
+}
+
+/* จะเห็นได้ว่า คำสั่ง z1 z2 ทีาสั่งไป z2 จะอยู่หลัง z1 */
+
+/* Grid Box-Alignment */
+
+.grid-container-align {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: "content content"
+                        "content content";
+    /* สามารถใช้คำสั่ง justify-content, align-item เพื่อกำหนดตำแหน่งได้ */
+    background: chartreuse;
+    padding: 1em;
+}
+
+
+.align1 {
+    /* ด้านบนเรากำหนดตำแหน่ง content 4ช่อง พอตรงนี้เราใส่content มันก็จะกินพื้นที่ทั้งหมด */
+    grid-area: content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
