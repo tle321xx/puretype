@@ -261,11 +261,21 @@ ul li {
     padding-top: 8px;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* padding-top: 32px; */
+}
 
+.footer-vid {
+    width: 60%;
+}
 
-
-
-
+.footer-vid video{
+    width: 60%;
+}
 
 
 
